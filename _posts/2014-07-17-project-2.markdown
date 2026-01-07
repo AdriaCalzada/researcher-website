@@ -1,11 +1,12 @@
 ---
 layout: default
 modal-id: 2
-date: 2014-07-17
-img: cake.png
+title: On the CO2 Harvesting from N2 Using Grazyne Membranes
+date: 2024-08-12
+img: 2.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+project-date: August 2024
+journal: ChemSusChem
+field: Molecular Separation
+description: The separation of carbon dioxide (CO2) from nitrogen (N2) is at the core of any global warming remediation technology aimed at reducing the CO2 content in the atmosphere. Chemical membranes designed to differentially permeate both molecules have become quite appealing due to their simple use, although many membrane-based separations stand out as a promising solution for CO2 separation, being environmentally friendly, with high active surface areas, compact design, easy to maintain and cost-effective, although the field is still growing due to the difficulties in the CO2/N2 separation. The present study poses grazynes, two-dimensional C-based materials with sp and sp2 C atoms, aligned along stripes, as suited membranes for the CO2/N2 separation.  The combination of density functional theory (DFT) and molecular dynamics (MD) simulations allow tackling the energetics, kinetics, and dynamics of the membrane effectiveness of grazynes with engineered pores for such a separation, in a holistic fashion. The explored grazynes are capable of physisorbing CO2 and N2, thus avoiding material poisoning by molecular decoration, while the diffusion of CO2 through the pores is found to be rapid, yet easier than that of N2, in the rate order of the s-1 in the 100-500 K temperature range. In particular, low-temperature CO2 separation even for CO2 contents below 0.5% are found for [1],[2]{2}-grazyne when controlling the membrane exposure contact to the gas mixture, paving the way for exploring and using grazynes for air CO2 remediation.
 ---
