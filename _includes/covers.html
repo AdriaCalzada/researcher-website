@@ -1,0 +1,42 @@
+<!-- Journal Covers Section -->
+<section id="covers" class="covers-modern">
+  <div class="container">
+    <div class="covers-header text-center">
+      <img class="section-logo" src="img/con-only-logo-coastal.png" alt="Adria Calzada logo">
+      <div class="section-kicker">Visual Highlights</div>
+      <h2>Journal Covers</h2>
+      <p class="section-subtitle">Featured cover art and highlights.</p>
+    </div>
+
+    <div class="covers-grid">
+      {% if site.data.covers and site.data.covers.size > 0 %}
+        {% for cover in site.data.covers %}
+        <article class="cover-card">
+          {% if cover.image %}
+          <a class="cover-image-link" href="{{ cover.link | default: cover.image }}" target="_blank" rel="noopener">
+            <img src="{{ cover.image }}" alt="{{ cover.title | default: 'Journal cover' }}">
+          </a>
+          {% endif %}
+          <div class="cover-body">
+            {% if cover.title %}
+            <h3 class="cover-title">{{ cover.title }}</h3>
+            {% endif %}
+            <div class="cover-meta">
+              {% if cover.journal %}
+              <span>{{ cover.journal }}</span>
+              {% endif %}
+              {% if cover.year %}
+              <span>{{ cover.year }}</span>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      {% else %}
+        <div class="section-empty">
+          Add your cover images and details in `_data/covers.yml`.
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<!-- Posters Section -->
+<section id="posters" class="posters-modern">
+  <div class="container">
+    <div class="posters-header text-center">
+      <img class="section-logo" src="img/con-only-logo-coastal.png" alt="Adria Calzada logo">
+      <div class="section-kicker">Conference Output</div>
+      <h2>Posters</h2>
+      <p class="section-subtitle">Full poster visuals with quick context.</p>
+    </div>
+
+    <div class="posters-grid">
+      {% if site.data.posters and site.data.posters.size > 0 %}
+        {% for poster in site.data.posters %}
+        <article class="poster-card">
+          {% if poster.image %}
+          <a class="poster-image-link" href="{{ poster.link | default: poster.image }}" target="_blank" rel="noopener">
+            <img src="{{ poster.image }}" alt="{{ poster.title | default: 'Poster' }}">
+          </a>
+          {% endif %}
+          <div class="poster-body">
+            {% if poster.title %}
+            <h3 class="poster-title">{{ poster.title }}</h3>
+            {% endif %}
+            <div class="poster-meta">
+              {% if poster.event %}
+              <span>{{ poster.event }}</span>
+              {% endif %}
+              {% if poster.year %}
+              <span>{{ poster.year }}</span>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      {% else %}
+        <div class="section-empty">
+          Add your poster images and details in `_data/posters.yml`.
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
