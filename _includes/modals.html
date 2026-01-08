@@ -2,42 +2,54 @@
 {% for post in site.posts %}
 <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
   aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
+  <div class="modal-content portfolio-modal-content">
+    <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>{{ post.title }}</h2>
-            <hr class="star-primary">
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-            {% if post.description %}
-            <p>{{ post.description }}</p>
-            {% endif %}
-            <ul class="list-inline item-details">
-              {% if post.journal %}
-              <li>Journal:
-                <strong>{{ post.journal }}</strong>
-              </li>
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="modal-body portfolio-modal-body">
+            <div class="portfolio-modal-header">
+              <div class="portfolio-modal-eyebrow">
+                {% if post.journal %}{{ post.journal }}{% endif %}
+                {% if post.field %} · {{ post.field }}{% endif %}
+              </div>
+              <h2>{{ post.title }}</h2>
+              {% if post.authors %}
+              <p class="portfolio-modal-authors">{{ post.authors }}</p>
               {% endif %}
-              {% if post.project-date %}
-              <li>Date:
-                <strong>{{ post.project-date }}</strong>
-              </li>
-              {% endif %}
-              {% if post.field %}
-              <li>Field:
-                <strong>{{ post.field }}</strong>
-              </li>
-              {% endif %}
-            </ul>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
+            </div>
+
+            <div class="portfolio-modal-grid">
+              <div class="portfolio-modal-media">
+                <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+              </div>
+              <div class="portfolio-modal-info">
+                {% if post.description %}
+                <p class="portfolio-modal-description">{{ post.description }}</p>
+                {% endif %}
+                <ul class="portfolio-modal-facts">
+                  {% if post.project-date %}
+                  <li><span>Date</span><strong>{{ post.project-date }}</strong></li>
+                  {% endif %}
+                  {% if post.journal %}
+                  <li><span>Journal</span><strong>{{ post.journal }}</strong></li>
+                  {% endif %}
+                  {% if post.field %}
+                  <li><span>Field</span><strong>{{ post.field }}</strong></li>
+                  {% endif %}
+                </ul>
+                <div class="portfolio-modal-actions">
+                  {% if post.paper_url %}
+                  <a class="hero-btn primary" href="{{ post.paper_url }}" target="_blank" rel="noopener">
+                    View paper
+                  </a>
+                  {% endif %}
+                  <button type="button" class="hero-btn ghost" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -35,3 +35,13 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Hide the hero scroll hint after the user starts scrolling
+$(function() {
+    var $body = $('body');
+    var updateScrollState = function() {
+        $body.toggleClass('is-scrolled', $(window).scrollTop() > 10);
+    };
+    updateScrollState();
+    $(window).on('scroll', updateScrollState);
+});

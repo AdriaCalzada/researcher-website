@@ -1,13 +1,32 @@
 <nav class="sidebar-nav" aria-label="Section navigation">
   <div class="sidebar-inner">
-    <div class="sidebar-title text-center">{{ site.title }}</div>
-    <div class="sidebar-subtitle text-center">{{ site.subtitle }}</div>
+    <div class="sidebar-brand">
+      <img class="sidebar-logo" src="img/con-only-logo-white.png" alt="{{ site.title }} logo">
+      <div class="sidebar-brand-text">
+        <div class="sidebar-title">{{ site.title }}</div>
+        <div class="sidebar-subtitle">{{ site.subtitle }}</div>
+      </div>
+    </div>
+
+    <div class="sidebar-badge">UB · Materials Science &amp; Physical Chemistry</div>
+
+    <div class="sidebar-divider"></div>
 
     <ul class="sidebar-links">
-        <li><a href="#page-top"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-        <li><a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a></li>
-        <li><a href="#contact"><i class="fa fa-envelope"></i> Contact</a></li>
+        <li><a href="#page-top"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="fa fa-user"></i><span>About</span></a></li>
+        <li><a href="#portfolio"><i class="fa fa-briefcase"></i><span>Portfolio</span></a></li>
+        <li><a href="mailto:adria.calzada@ub.edu"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
     </ul>
+
+    <div class="sidebar-social">
+      {% for network in site.social %}
+      {% if network.url %}
+      <a class="sidebar-social-link" href="{{ network.url }}" target="_blank" rel="noopener" aria-label="{{ network.title }}">
+        <i class="fa fa-{{ network.title }}"></i>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </nav>

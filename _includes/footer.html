@@ -1,41 +1,42 @@
 <!-- Footer -->
-<footer class="text-center">
-  <div class="footer-above">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-4">
-          <h3>{{ site.footer.location }}</h3>
-          <p>
-            {% for adress in site.address %}
-            {{ adress.line }} <br>
-            {% endfor %}
-          </p>
+<footer class="footer-modern">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="footer-logo" src="img/con-only-logo-white.png" alt="{{ site.title }} logo">
+        <div>
+          <div class="footer-title">{{ site.title }}</div>
+          <div class="footer-subtitle">{{ site.subtitle }}</div>
         </div>
-        <div class="footer-col col-md-4">
-          <h3>{{ site.footer.social }}</h3>
-          <ul class="list-inline">
-            {% for network in site.social %}
-            <li>
-              <a href="{{ network.url }}" class="btn-social btn-outline"><i
-                  class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="footer-col col-md-4">
-          <h3>{{ site.footer.credits }}</h3>
-          <p>{{ site.credits }}</p>
+      </div>
+
+      <div class="footer-meta">
+        <div class="footer-kicker">{{ site.footer.location }}</div>
+        <p class="footer-address">
+          {% for adress in site.address %}
+          {{ adress.line }} <br>
+          {% endfor %}
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <div class="footer-kicker">Connect</div>
+        <div class="footer-social-links">
+          {% for network in site.social %}
+          {% if network.url %}
+          <a href="{{ network.url }}" class="footer-social-link" target="_blank" rel="noopener" aria-label="{{ network.title }}">
+            <i class="fa fa-{{ network.title }}"></i>
+          </a>
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
-  </div>
-  <div class="footer-below">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}
-        </div>
-      </div>
+
+    <div class="footer-bottom">
+      <span>© {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}</span>
+      <span class="footer-dot">·</span>
+      <span>Materials Science & Physical Chemistry · University of Barcelona</span>
     </div>
   </div>
 </footer>

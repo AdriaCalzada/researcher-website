@@ -1,24 +1,39 @@
 <!-- Portfolio Grid Section -->
-<section id="portfolio">
-  <div class="container portfolio-flex-grid">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Portfolio</h2>
-        <hr class="star-primary">
-      </div>
+<section id="portfolio" class="portfolio-modern">
+  <div class="container">
+    <div class="portfolio-header text-center">
+      <img class="section-logo" src="img/con-only-logo-coastal.png" alt="Adrià Calzada logo">
+      <div class="section-kicker">Selected Research</div>
+      <h2>Articles</h2>
     </div>
-    <div class="portfolio-flex-row">
-      {% for post in site.posts %}
-      <div class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
+
+    <div class="portfolio-grid">
+      {% assign posts_sorted = site.posts | sort: "date" | reverse %}
+      {% for post in posts_sorted %}
+      <article class="portfolio-card">
+        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-card-link" data-toggle="modal">
+          <div class="portfolio-media">
+            <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}">
+            <span class="portfolio-overlay">
+              <span class="portfolio-view">View details</span>
+            </span>
           </div>
-          <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">{{ post.title }}</h3>
+            <div class="portfolio-meta">
+              {% if post.journal %}
+              <span>{{ post.journal }}</span>
+              {% endif %}
+              {% if post.project-date %}
+              <span>{{ post.project-date }}</span>
+              {% endif %}
+            </div>
+            {% if post.field %}
+            <span class="portfolio-tag">{{ post.field }}</span>
+            {% endif %}
+          </div>
         </a>
-      </div>
+      </article>
       {% endfor %}
     </div>
   </div>
