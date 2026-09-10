@@ -1,42 +1,22 @@
-<!-- Posters Section -->
-<section id="posters" class="posters-modern">
-  <div class="container">
-    <div class="posters-header text-center">
-      <img class="section-logo" src="img/con-only-logo-coastal.png" alt="Adria Calzada logo">
-      <div class="section-kicker">Conference Output</div>
-      <h2>Posters</h2>
-      <p class="section-subtitle">Full poster visuals with quick context.</p>
+<section class="section section-posters" id="posters">
+  <div class="shell">
+    <div class="section-heading section-heading-dark">
+      <div><p class="eyebrow">Conferences</p><h2>Posters.</h2></div>
+      <p>Visual summaries of research shared with the scientific community.</p>
     </div>
-
-    <div class="posters-grid">
-      {% if site.data.posters and site.data.posters.size > 0 %}
-        {% for poster in site.data.posters %}
-        <article class="poster-card">
-          {% if poster.image %}
-          <a class="poster-image-link" href="{{ poster.link | default: poster.image }}" target="_blank" rel="noopener">
-            <img src="{{ poster.image }}" alt="{{ poster.title | default: 'Poster' }}">
-          </a>
-          {% endif %}
-          <div class="poster-body">
-            {% if poster.title %}
-            <h3 class="poster-title">{{ poster.title }}</h3>
-            {% endif %}
-            <div class="poster-meta">
-              {% if poster.event %}
-              <span>{{ poster.event }}</span>
-              {% endif %}
-              {% if poster.year %}
-              <span>{{ poster.year }}</span>
-              {% endif %}
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      {% else %}
-        <div class="section-empty">
-          Add your poster images and details in `_data/posters.yml`.
+    <div class="poster-grid">
+      {% for poster in site.data.posters %}
+      <article class="poster-card">
+        <a class="poster-preview" href="{{ poster.pdf | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ poster.title | strip_html }} as PDF">
+          <img src="{{ poster.thumbnail | relative_url }}" alt="Preview of the poster {{ poster.title | strip_html }}" loading="lazy">
+          <span>Open full poster <i aria-hidden="true">↗</i></span>
+        </a>
+        <div class="poster-info">
+          <p>{{ poster.event }} · {{ poster.year }}</p>
+          <h3>{{ poster.title }}</h3>
         </div>
-      {% endif %}
+      </article>
+      {% endfor %}
     </div>
   </div>
 </section>

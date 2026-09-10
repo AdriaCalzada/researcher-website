@@ -1,7 +1,7 @@
-require 'html-proofer'
-
+desc "Build the site and check its internal links"
 task :test do
-  sh "bundle exec jekyll build"
-  options = { :assume_extension => true, :only_4xx => true, :allow_hash_href => true}
-  HTMLProofer.check_directory("./_site", options).run
+  sh "bundle exec jekyll build --trace"
+  sh "ruby scripts/check_site.rb _site /researcher-website"
 end
+
+task default: :test

@@ -1,65 +1,22 @@
-<!-- About Section -->
-<section class="aboutbackground about-modern" id="about">
-  <div class="container">
-
-    <div class="about-hero">
-      <div class="about-hero-text">
-        <h2 class="about-title">About</h2>
-        <p class="about-subtitle">Computational chemistry · DFT/MD · 2D membranes</p>
-        <p class="about-lead">
-          I’m Adrià Calzada—a Chemistry graduate turned computational researcher, currently doing a PhD in Nanoscience (Chemistry) at the University of Barcelona (IQTC). I use DFT and molecular dynamics to design and understand atomically engineered 2D carbon membranes (grazynes) for selective gas separation, with a particular focus on CO<sub>2</sub> capture and clean-energy applications. I like connecting the “atomic story” (adsorption, diffusion, selectivity) to performance you can actually compare, and I’ve published this work in venues like ChemSusChem, Nanomaterials, and the International Journal of Hydrogen Energy. I also spent a research stay at UCLA (Alexandrova Group) sharpening my workflow for tackling complex catalytic environments and global optimization—this site is where I share the projects, papers, and tools that come out of that journey.
-        </p>
-      </div>
-
-      <div class="about-hero-aside">
-        <div class="about-kicker">Quick facts</div>
-        <ul class="about-list">
-          <li><i class="fa fa-university"></i> PhD at University of Barcelona (IQTC)</li>
-          <li><i class="fa fa-flask"></i> Background in Chemistry</li>
-          <li><i class="fa fa-cogs"></i> Specialized in Computational Chemistry</li>
-          <li><i class="fa fa-leaf"></i> Focus on Catalysis & Molecular Separation</li>
-          <li><i class="fa fa-globe"></i> Research stay at UCLA (Alexandrova Lab)</li>
-        </ul>
-
+<section class="section section-about" id="about">
+  <div class="shell about-grid">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Connecting atomic-scale insight with real-world performance.</h2>
+    </div>
+    <div class="about-copy">
+      <p>I am a computational chemistry researcher and PhD candidate in Nanoscience at the University of Barcelona's Institute of Theoretical and Computational Chemistry (IQTC).</p>
+      <p>My work combines density functional theory and molecular dynamics to study atomically engineered two-dimensional carbon membranes, particularly grazynes. I focus on adsorption, diffusion and selectivity in processes including CO<sub>2</sub> capture, air purification, biogas upgrading and syngas control.</p>
+      <p>A research stay with the Alexandrova Group at UCLA expanded my experience in complex catalytic environments and global optimization.</p>
+      <div class="profile-links" aria-label="Research profiles">
+        {% for profile in site.profiles %}<a href="{{ profile.url }}" target="_blank" rel="noopener noreferrer">{{ profile.title }} <span aria-hidden="true">↗</span></a>{% endfor %}
       </div>
     </div>
-
-    <!-- Highlights -->
-    <div class="about-highlights">
-      <h3 class="facts-title">Highlights</h3>
-      <div class="row facts-row">
-        <div class="col-sm-6 col-md-3">
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa fa-file-text-o"></i></div>
-            <div class="stat-value">4</div>
-            <div class="stat-label">Journal Papers</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa fa-quote-left"></i></div>
-            <div class="stat-value">17</div>
-            <div class="stat-label">Citations</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa fa-code"></i></div>
-            <div class="stat-value">20+</div>
-            <div class="stat-label">Automation scripts</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fa fa-rocket"></i></div>
-            <div class="stat-value">3</div>
-            <div class="stat-label">Core topics</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  </div>
+  <div class="shell stat-strip" aria-label="Research output at a glance">
+    <div><strong>{{ site.posts | size }}</strong><span>Journal publications</span></div>
+    <div><strong>{{ site.data.posters | size }}</strong><span>Conference posters</span></div>
+    <div><strong>{{ site.data.covers | size }}</strong><span>Journal cover</span></div>
+    <div><strong>DFT + MD</strong><span>Core methodology</span></div>
+  </div>
 </section>

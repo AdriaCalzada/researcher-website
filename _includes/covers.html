@@ -1,42 +1,15 @@
-<!-- Journal Covers Section -->
-<section id="covers" class="covers-modern">
-  <div class="container">
-    <div class="covers-header text-center">
-      <img class="section-logo" src="img/con-only-logo-coastal.png" alt="Adria Calzada logo">
-      <div class="section-kicker">Visual Highlights</div>
-      <h2>Journal Covers</h2>
-      <p class="section-subtitle">Featured cover art and highlights.</p>
+<section class="section section-covers" id="covers">
+  <div class="shell cover-layout">
+    <div class="cover-copy">
+      <p class="eyebrow eyebrow-light">Journal cover</p>
+      <h2>Research beyond the paper.</h2>
+      <p>Featured cover art for work on CO<sub>2</sub> harvesting from N<sub>2</sub> using grazyne membranes.</p>
+      {% assign cover = site.data.covers.first %}
+      <p class="cover-meta">{{ cover.journal }} · {{ cover.issue }} · {{ cover.year }}</p>
+      <a class="button button-light" href="{{ cover.link }}" target="_blank" rel="noopener noreferrer">View cover feature <span aria-hidden="true">↗</span></a>
     </div>
-
-    <div class="covers-grid">
-      {% if site.data.covers and site.data.covers.size > 0 %}
-        {% for cover in site.data.covers %}
-        <article class="cover-card">
-          {% if cover.image %}
-          <a class="cover-image-link" href="{{ cover.link | default: cover.image }}" target="_blank" rel="noopener">
-            <img src="{{ cover.image }}" alt="{{ cover.title | default: 'Journal cover' }}">
-          </a>
-          {% endif %}
-          <div class="cover-body">
-            {% if cover.title %}
-            <h3 class="cover-title">{{ cover.title }}</h3>
-            {% endif %}
-            <div class="cover-meta">
-              {% if cover.journal %}
-              <span>{{ cover.journal }}</span>
-              {% endif %}
-              {% if cover.year %}
-              <span>{{ cover.year }}</span>
-              {% endif %}
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      {% else %}
-        <div class="section-empty">
-          Add your cover images and details in `_data/covers.yml`.
-        </div>
-      {% endif %}
-    </div>
+    <a class="cover-art" href="{{ cover.pdf | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open the {{ cover.journal }} cover as PDF">
+      <img src="{{ cover.thumbnail | relative_url }}" alt="{{ cover.alt }}" loading="lazy">
+    </a>
   </div>
 </section>

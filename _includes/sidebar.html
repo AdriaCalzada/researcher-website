@@ -1,34 +1,24 @@
-<nav class="sidebar-nav" aria-label="Section navigation">
-  <div class="sidebar-inner">
-    <div class="sidebar-brand">
-      <img class="sidebar-logo" src="img/con-only-logo-white.png" alt="{{ site.title }} logo">
-      <div class="sidebar-brand-text">
-        <div class="sidebar-title">{{ site.title }}</div>
-        <div class="sidebar-subtitle">{{ site.subtitle }}</div>
-      </div>
-    </div>
-
-    <div class="sidebar-badge">UB · Materials Science &amp; Physical Chemistry</div>
-
-    <div class="sidebar-divider"></div>
-
-    <ul class="sidebar-links">
-        <li><a href="#page-top"><i class="fa fa-home"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="fa fa-user"></i><span>About</span></a></li>
-        <li><a href="#portfolio"><i class="fa fa-briefcase"></i><span>Articles</span></a></li>
-        <li><a href="#posters"><i class="fa fa-file-image"></i><span>Posters</span></a></li>
-        <li><a href="#covers"><i class="fa fa-bookmark"></i><span>Journal Covers</span></a></li>
-        <!-- <li><a href="mailto:adria.calzada@ub.edu"><i class="fa fa-envelope"></i><span>Contact</span></a></li> -->
-    </ul>
-
-    <div class="sidebar-social">
-      {% for network in site.social %}
-      {% if network.url %}
-      <a class="sidebar-social-link" href="{{ network.url }}" target="_blank" rel="noopener" aria-label="{{ network.title }}">
-        <i class="fa fa-{{ network.title }}"></i>
-      </a>
-      {% endif %}
-      {% endfor %}
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="nav-shell">
+    <a class="nav-brand" href="#page-top" aria-label="{{ site.title }} — home">
+      <img src="{{ '/img/con-only-logo-white.png' | relative_url }}" width="42" height="41" alt="">
+      <span>
+        <strong>{{ site.title }}</strong>
+        <small>Computational chemistry</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only">Open navigation</span>
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#trajectory">Path &amp; news</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#posters">Posters</a>
+      <a href="#covers">Covers</a>
+      <a class="nav-contact" href="mailto:{{ site.email }}">Contact</a>
     </div>
   </div>
 </nav>

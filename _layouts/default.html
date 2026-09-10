@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html>
-{% include head.html %}
-
-<body id="page-top" class="index">
-  {% include sidebar.html %}  
-  {% include header.html %}
-  {% include about.html %}
-  {% include portfolio_grid.html %}
-  {% include posters.html %}
-  {% include covers.html %}
-
-  {% include footer.html %}
-  {% include modals.html %}
-  {% include js.html %}
-</body>
-
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  {% include head.html %}
+  <body id="page-top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    {% include sidebar.html %}
+    <main id="main-content">
+      {% include header.html %}
+      {% include about.html %}
+      {% include trajectory.html %}
+      {% include research.html %}
+      {% include portfolio_grid.html %}
+      {% include posters.html %}
+      {% include covers.html %}
+    </main>
+    {% include footer.html %}
+    {% include js.html %}
+  </body>
 </html>

@@ -1,49 +1,18 @@
-<!-- Footer -->
-<footer class="footer-modern">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img class="footer-logo" src="img/con-only-logo-white.png" alt="{{ site.title }} logo">
-        <div>
-          <div class="footer-title">{{ site.title }}</div>
-          <div class="footer-subtitle">{{ site.subtitle }}</div>
-        </div>
-      </div>
-
-      <div class="footer-meta">
-        <div class="footer-kicker">{{ site.footer.location }}</div>
-        <p class="footer-address">
-          {% for adress in site.address %}
-          {{ adress.line }} <br>
-          {% endfor %}
-        </p>
-      </div>
-
-      <div class="footer-social">
-        <div class="footer-kicker">Connect</div>
-        <div class="footer-social-links">
-          {% for network in site.social %}
-          {% if network.url %}
-          <a href="{{ network.url }}" class="footer-social-link" target="_blank" rel="noopener" aria-label="{{ network.title }}">
-            <i class="fa fa-{{ network.title }}"></i>
-          </a>
-          {% endif %}
-          {% endfor %}
-        </div>
-      </div>
+<footer class="site-footer">
+  <div class="shell footer-cta">
+    <p class="eyebrow eyebrow-light">Contact</p>
+    <h2>Interested in computational chemistry, molecular separation or collaboration?</h2>
+    <a class="footer-email" href="mailto:{{ site.email }}">{{ site.email }} <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="shell footer-bottom">
+    <div class="footer-identity">
+      <img src="{{ '/img/con-only-logo-white.png' | relative_url }}" width="52" height="51" alt="">
+      <p><strong>{{ site.title }}</strong><br>{{ site.subtitle }}</p>
     </div>
-
-    <div class="footer-bottom">
-      <span>© {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}</span>
-      <span class="footer-dot">·</span>
-      <span>Materials Science & Physical Chemistry · University of Barcelona</span>
+    <address>{% for item in site.address %}{{ item.line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</address>
+    <div class="footer-links">
+      {% for profile in site.profiles %}<a href="{{ profile.url }}" target="_blank" rel="noopener noreferrer">{{ profile.title }}</a>{% endfor %}
     </div>
   </div>
+  <div class="shell footer-legal"><span>© {{ site.time | date: '%Y' }} {{ site.title }}</span><a href="#page-top">Back to top ↑</a></div>
 </footer>
-
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll visible-xs visible-sm">
-  <a class="btn btn-primary" href="#page-top">
-    <i class="fa fa-chevron-up"></i>
-  </a>
-</div>

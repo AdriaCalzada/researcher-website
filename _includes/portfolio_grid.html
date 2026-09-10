@@ -1,38 +1,31 @@
-<!-- Portfolio Grid Section -->
-<section id="portfolio" class="portfolio-modern">
-  <div class="container">
-    <div class="portfolio-header text-center">
-      <img class="section-logo" src="img/con-only-logo-coastal.png" alt="Adrià Calzada logo">
-      <div class="section-kicker">Selected Research</div>
-      <h2>Articles</h2>
+<section class="section section-publications" id="publications">
+  <div class="shell">
+    <div class="section-heading section-heading-dark">
+      <div><p class="eyebrow">Publications</p><h2>Selected research.</h2></div>
+      <p>Peer-reviewed work on molecular transport and separation through nano-engineered carbon membranes.</p>
     </div>
 
-    <div class="portfolio-grid">
+    <div class="publication-list">
       {% assign posts_sorted = site.posts | sort: "date" | reverse %}
       {% for post in posts_sorted %}
-      <article class="portfolio-card">
-        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-card-link" data-toggle="modal">
-          <div class="portfolio-media">
-            <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}">
-            <span class="portfolio-overlay">
-              <span class="portfolio-view">View details</span>
-            </span>
+      <article class="publication-card">
+        <div class="publication-image">
+          <img src="{{ '/img/portfolio/' | append: post.thumbnail | relative_url }}" width="720" height="480" alt="{{ post.alt | escape }}" loading="lazy">
+          <span>{{ post.field }}</span>
+        </div>
+        <div class="publication-content">
+          <div class="publication-meta"><span>{{ post.journal }}{% if post.citation %} · {{ post.citation }}{% endif %}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y' }}</time></div>
+          <h3>{{ post.title }}</h3>
+          <p class="publication-authors">{{ post.authors }}</p>
+          {% if post.summary %}<p class="publication-summary">{{ post.summary }}</p>{% endif %}
+          <div class="publication-actions">
+            <a class="text-link" href="{{ post.paper_url }}" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+            <details>
+              <summary>View abstract</summary>
+              <div class="abstract"><p>{{ post.description }}</p></div>
+            </details>
           </div>
-          <div class="portfolio-body">
-            <h3 class="portfolio-title">{{ post.title }}</h3>
-            <div class="portfolio-meta">
-              {% if post.journal %}
-              <span>{{ post.journal }}</span>
-              {% endif %}
-              {% if post.project-date %}
-              <span>{{ post.project-date }}</span>
-              {% endif %}
-            </div>
-            {% if post.field %}
-            <span class="portfolio-tag">{{ post.field }}</span>
-            {% endif %}
-          </div>
-        </a>
+        </div>
       </article>
       {% endfor %}
     </div>

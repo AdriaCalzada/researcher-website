@@ -1,14 +1,13 @@
 ---
 layout: default
-modal-id: 2
 title: "On the CO<sub>2</sub> Harvesting from N<sub>2</sub> Using Grazyne Membranes"
 date: 2024-08-12
-img: 2.png
-alt: image-alt
-project-date: August 2024
+thumbnail: 2.webp
+alt: "Grazyne membrane model for selective carbon dioxide harvesting from nitrogen"
 journal: ChemSusChem
 field: Air Purification
 paper_url: https://doi.org/10.1002/cssc.202400852
 authors: Adrià Calzada, Francesc Viñes, Pablo Gamallo
+summary: "A holistic DFT and molecular dynamics analysis of low-temperature CO₂ separation from nitrogen with engineered grazyne pores."
 description: The separation of carbon dioxide (CO<sub>2</sub>) from nitrogen (N<sub>2</sub>) is at the core of any global warming remediation technology aimed at reducing the CO<sub>2</sub> content in the atmosphere. Chemical membranes designed to differentially permeate both molecules have become quite appealing due to their simple use, although many membrane-based separations stand out as a promising solution for CO<sub>2</sub> separation, being environmentally friendly, with high active surface areas, compact design, easy to maintain and cost-effective, although the field is still growing due to the difficulties in the CO<sub>2</sub>/N<sub>2</sub> separation. The present study poses grazynes, two-dimensional C-based materials with sp and sp2 C atoms, aligned along stripes, as suited membranes for the CO<sub>2</sub>/N<sub>2</sub> separation.  The combination of density functional theory (DFT) and molecular dynamics (MD) simulations allow tackling the energetics, kinetics, and dynamics of the membrane effectiveness of grazynes with engineered pores for such a separation, in a holistic fashion. The explored grazynes are capable of physisorbing CO<sub>2</sub> and N<sub>2</sub>, thus avoiding material poisoning by molecular decoration, while the diffusion of CO<sub>2</sub> through the pores is found to be rapid, yet easier than that of N<sub>2</sub>, in the rate order of the s-1 in the 100-500 K temperature range. In particular, low-temperature CO<sub>2</sub> separation even for CO<sub>2</sub> contents below 0.5% are found for [1],[2]{2}-grazyne when controlling the membrane exposure contact to the gas mixture, paving the way for exploring and using grazynes for air CO<sub>2</sub> remediation.
 ---

@@ -1,69 +1,47 @@
-# Site settings
-title: Adrià Calzada
-email: adria.calzada@ub.edu
-url: https://github.com/AdriaCalzada
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
-subtitle: "Researcher"
-skills: "Reasearcher"
-meta_author: LastName FirstName
+# Site identity
+title: "Adrià Calzada"
+subtitle: "Computational chemistry researcher"
+email: "adria.calzada@ub.edu"
+description: "Adrià Calzada researches molecular separation, catalysis and two-dimensional carbon membranes using density functional theory and molecular dynamics."
+keywords: "Adrià Calzada, computational chemistry, DFT, molecular dynamics, grazyne, gas separation, catalysis, University of Barcelona"
+meta_author: "Adrià Calzada"
+lang: "en"
+author:
+  name: "Adrià Calzada"
+  email: "adria.calzada@ub.edu"
+  uri: "https://github.com/AdriaCalzada"
 
-# Google webmaster tools
-google_verify:
+# GitHub Pages project site
+url: "https://adriacalzada.github.io"
+baseurl: "/researcher-website"
+repository: "AdriaCalzada/researcher-website"
 
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
+# Research profiles
+profiles:
+  - title: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=BHxnYEYAAAAJ&hl=en"
+  - title: "ResearchGate"
+    url: "https://www.researchgate.net/profile/Adria-Calzada"
+  - title: "GitHub"
+    url: "https://github.com/AdriaCalzada"
 
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
-contact: static
-
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: myshortname
-
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary: 148B8A #80B3FF
-  primary-rgb: "20,139,138" #"128,179,255"
-  secondary: 22324A #FD6E8A
-  secondary-dark: 172236 #A2122F
-
-# Footer settings
-footer:
-  copyright: MSc. Adrià Calzada
-  location: Location
-  social: Around the Web
-  credits: Credits
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
-
-# Postal address (add as many lines as necessary)
 address:
-  - line: Martí i Franquès 1-11
-  - line: Barcelona, 08028
+  - line: "Faculty of Chemistry, University of Barcelona"
+  - line: "Martí i Franquès, 1–11 · 08028 Barcelona, Spain"
 
-# Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
-
-# Build settings
 markdown: kramdown
 permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+  - Rakefile
+  - freelancer-theme-jekyll.gemspec
+  - mail
+  - work
 
-#for posts
 defaults:
   - scope:
       path: ""

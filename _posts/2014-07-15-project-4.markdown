@@ -1,14 +1,13 @@
 ---
 layout: default
-modal-id: 4
 title: "Thermodynamic, kinetic and dynamic aspects of biogas upgrading using nano-engineered grazynes"
 date: 2023-03-22
-img: 1.jpg
-alt: image-alt
-project-date: March 2023
+thumbnail: 1.webp
+alt: "Molecular simulation of gas transport through a nano-engineered grazyne membrane"
 journal: Journal of CO2 Utilization
 field: Biogas Upgrading
 authors: Francesc Viñes, Adrià Calzada, Pablo Gamallo
 paper_url: https://www.sciencedirect.com/science/article/pii/S2212982023000707?via%3Dihub
+summary: "A combined DFT and molecular dynamics study of grazyne membranes for separating CO₂ from methane in biogas streams."
 description: Different nano-engineered grazynes have been studied as possible membranes to separate methane (CH<sub>4</sub>) from carbon dioxide (CO<sub>2</sub>) by density functional theory (DFT) and molecular dynamics (MD) computational simulations. The study tackles the process thermodynamics, kinetics, and dynamical aspects associated to the diffusion rates and selectivities in the context of biogas upgrading while comparing to other materials available in the literature. Small adsorption energy values have been obtained for three semi-permeable grazynes, with low diffusion energy barriers which severely reduce as long as the grazyne pore increases. Selectivities towards CO<sub>2</sub> permeation as large as 39 are found at high pressures for [1],[2]{2}-grazyne, closely followed by [1],[2]{(00),2}-grazyne, posing grazynes as excellent membranes for biogas upgrading with clear advantages compared to scrubbing materials in terms of much improved selectivity, continuous workflow and an order of magnitude larger quantity of separated CO<sub>2</sub> per material gram. Present computational simulations reveal that grazynes could be able to upgrade biogas beyond 97 % (v/v) in methane, accomplishing standard worldwide government requirements.
 ---

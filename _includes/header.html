@@ -1,53 +1,27 @@
-<!-- Header -->
-<header class="hero-modern">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <img class="hero-logo" src="img/con-only-logo-coastal.png" alt="Adrià Calzada logo">
-        <div class="hero-eyebrow">{{ site.subtitle }}</div>
-        <h1 class="hero-title">{{ site.title }}</h1>
-        <p class="hero-dept">Materials science and physical chemistry department · University of Barcelona</p>
-
-        <div class="hero-chips">
-          <span class="hero-chip">DFT</span>
-          <span class="hero-chip">Molecular Dynamics</span>
-          <span class="hero-chip">Molecular Separation</span>
-          <span class="hero-chip">Catalysis</span>
-        </div>
-
-        <div class="hero-actions">
-          <a class="hero-btn primary" href="#portfolio">View Articles</a>
-          <a class="hero-btn ghost" href="mailto:adria.calzada@ub.edu">Contact</a>
-        </div>
-
-        <div class="hero-social">
-          <a class="hero-social-link" href="mailto:adria.calzada@ub.edu" aria-label="Email">
-            <i class="fa fa-envelope"></i>
-          </a>
-          <a class="hero-social-link" href="https://scholar.google.com/citations?user=BHxnYEYAAAAJ&hl=ca" target="_blank" rel="noopener" aria-label="Google Scholar">
-            <i class="fa fa-graduation-cap"></i>
-          </a>
-          <a class="hero-social-link" href="https://www.researchgate.net/profile/Adria-Calzada" target="_blank" rel="noopener" aria-label="ResearchGate">
-            <i class="fa fa-graduation-cap"></i>
-          </a>
-          <a class="hero-social-link" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>
+<header class="hero">
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">PhD researcher · University of Barcelona</p>
+      <h1>Adrià<br><span>Calzada</span></h1>
+      <p class="hero-lead">I use atomistic simulations to understand and design materials for cleaner molecular separations and catalytic processes.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#publications">Explore publications</a>
+        <a class="button button-secondary" href="mailto:{{ site.email }}">Get in touch</a>
       </div>
-
-      <div class="hero-media">
-        <div class="hero-portrait-frame">
-          <img class="img-responsive profile-pic" src="img/profile.jpg" alt="profile-pic" />
-        </div>
-        <div class="hero-caption">
-          <span>Computational chemistry</span>
-        </div>
+      <ul class="hero-topics" aria-label="Research methods and topics">
+        <li>Density functional theory</li><li>Molecular dynamics</li><li>2D membranes</li>
+      </ul>
+    </div>
+    <div class="hero-portrait">
+      <div class="portrait-frame">
+        <img src="{{ '/img/profile.webp' | relative_url }}" width="720" height="720" alt="Portrait of Adrià Calzada" fetchpriority="high">
+      </div>
+      <div class="portrait-note">
+        <span aria-hidden="true"></span>
+        <p><strong>Based in Barcelona</strong><br>Institut de Química Teòrica i Computacional</p>
       </div>
     </div>
-    <a class="hero-scroll" href="#about" aria-label="Scroll to About">
-      <span class="hero-scroll-label">Scroll</span>
-      <span class="hero-scroll-dot"></span>
-    </a>
   </div>
+  <a class="scroll-cue" href="#about" aria-label="Continue to About"><span>Scroll to discover</span><i aria-hidden="true">↓</i></a>
 </header>

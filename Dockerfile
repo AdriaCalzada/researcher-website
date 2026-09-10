@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /srv/jekyll
 
-# Bundler estable (evita sorpresas)
-RUN gem update --system && gem install bundler -v 2.7.2
+# Match the Bundler version recorded in Gemfile.lock.
+RUN gem install bundler -v 2.7.2 --no-document

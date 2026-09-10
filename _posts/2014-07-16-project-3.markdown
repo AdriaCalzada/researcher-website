@@ -1,14 +1,13 @@
 ---
 layout: default
-modal-id: 3
 title: "Selective O<sub>2</sub>/N<sub>2</sub> Separation Using Grazyne Membranes: A Computational Approach Combining Density Functional Theory and Molecular Dynamics"
 date: 2024-12-22
-img: 3.png
-alt: image-alt
-project-date: December 2024
+thumbnail: 3.webp
+alt: "Computational model of oxygen and nitrogen separation through a grazyne membrane"
 journal: Nanomaterials
 field: Molecular Separation
 authors: Adrià Calzada, Francesc Viñes, Pablo Gamallo
 paper_url: https://www.mdpi.com/2079-4991/14/24/2053
+summary: "Atomistic simulations assess adsorption, diffusion and oxygen selectivity in two grazyne membrane structures."
 description: The separation of oxygen (O<sub>2</sub>) and nitrogen (N<sub>2</sub>) from air is a process of utmost importance nowadays, as both species are vital for numerous fundamental processes essential for our development. Membranes designed for their selective molecule separation have become the materials of choice for researchers, primarily due to their ease of use. The present study proposes grazynes, 2D carbon-based materials consisting of sp and sp2 C atoms, as suitable membranes for separating O<sub>2</sub> and N<sub>2</sub> from air. By combining static density functional theory (DFT) calculations with molecular dynamics (MD) simulations, we address this issue through a comprehensive examination of the thermodynamic, kinetic, and dynamic aspects of the molecular diffusions across the nano-engineered pores of grazynes. The studied grazyne structures have demonstrated the ability to physisorb both O<sub>2</sub> and N<sub>2</sub>, preventing material saturation, with diffusion rates exceeding 1 s−1 across a temperature range of 100–500 K. Moreover, they exhibit a selectivity of ca. 2 towards O<sub>2</sub> at 300 K. Indeed, MD simulations with equimolar mixtures of O<sub>2</sub>:N<sub>2</sub> indicated a selectivity towards O<sub>2</sub> in both grazynes with ca. twice as many O<sub>2</sub> filtered molecules in the [1],[2]{2}-grazyne and with O<sub>2</sub> representing ca. 88% of the filtered gas in the [1],[2]{(0,0),2}-grazyne. [1],[2]{2}-grazyne shows higher permeability for both molecules compared to the other grazyne, with O₂ demonstrating particularly enhanced diffusion capacity across both membranes. Further MD simulations incorporating CO<sub>2</sub> and Ar confirm O<sub>2</sub> enrichment, particularly with [1],[2]{(0,0),2}-grazyne, which increased the presence of O<sub>2</sub> in the filtered mixture by 26% with no evidence of CO<sub>2</sub> molecules.
 ---
